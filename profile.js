@@ -1,23 +1,7 @@
-const bestColor = (element1) => {
-  element1.preventDefault();
-  alert("Charcoal");
-};
-let favoriteColor = document.getElementById("color");
+const favoriteButtons = document.querySelectorAll("button");
 
-favoriteColor.addEventListener("click", bestColor);
-
-const bestPlace = (element2) => {
-  element2.preventDefault();
-  alert("Challenger Deep");
-};
-let favoritePlace = document.getElementById("place");
-
-favoritePlace.addEventListener("click", bestPlace);
-
-const bestRitual = (element3) => {
-  element3.preventDefault();
-  alert("Summoning Cthulu");
-};
-let favoriteRitual = document.getElementById("ritual");
-
-favoriteRitual.addEventListener("click", bestRitual);
+for (let i = 0; i < favoriteButtons.length; i++) {
+  favoriteButtons[i].addEventListener("click", (element) => {
+    alert(`My favorite ${element.target.id} is ${element.target.value}`);
+  });
+}
